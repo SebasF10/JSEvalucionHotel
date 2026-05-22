@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reservas.css">
+    <script src="js/reservas.js" defer></script>
+    <title>Reservas — Hotel Rincón del Carmen</title>
+</head>
+
+<body>
+
+  <!-- ===== HEADER STICKY ===== -->
+  <header class="header">
+    <h1>Hotel Rincón del Carmen</h1>
+    <nav>
+      <a href="Inicio.html" class="nav-link">Inicio</a>
+      <a href="panelcontrol.html" class="nav-link" id="nav-panelcontrol">Panel de Control</a>
+      <a href="tus_reservas.html" class="nav-link" id="nav-tus-reservas">Mis Reservas</a>
+      <a href="contacto.html" class="nav-link nav-contacto" title="Contacto">✉</a>
+      <a href="perfil.html" class="nav-link nav-perfil" title="Mi cuenta">
+        <img src="images\perfil-logo.png" alt="Mi cuenta" class="nav-avatar">
+      </a>
+    </nav>
+  </header>
+
+  <section class="seccion-titulo-wrapper">
+    <div class="seccion-titulo">
+      <h2>Reserva tu <span class="resaltado">Experiencia</span></h2>
+      <p class="seccion-subtitulo">Completa el formulario a continuación para asegurar tu lugar en nuestro oasis de relajación.</p>
+    </div>
+
+    <div class="contenedor-reserva">
+        <form class="formulario-reserva" action="#" method="POST">
+            
+            <div class="grupo-formulario">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+            </div>
+
+            <div class="fila-formulario">
+                <div class="grupo-formulario">
+                    <label for="checkin">Fecha de Entrada (Check-In)</label>
+                    <input type="date" id="checkin" name="checkin" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="checkout">Fecha de Salida (Check-Out)</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                </div>
+            </div>
+
+            <div class="fila-formulario">
+                <div class="grupo-formulario">
+                    <label for="habitacion">Tipo de Habitación</label>
+                    <select id="habitacion" name="habitacion" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="suite-presidencial">Suite Presidencial</option>
+                        <option value="suite-junior">Suite Junior</option>
+                        <option value="doble-deluxe">Doble Deluxe</option>
+                        <option value="familiar-superior">Familiar Superior</option>
+                        <option value="individual-ejecutiva">Individual Executive</option>
+                    </select>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="huespedes">Número de Huéspedes</label>
+                    <select id="huespedes" name="huespedes" required>
+                        <option value="1">1 Persona</option>
+                        <option value="2" selected>2 Personas</option>
+                        <option value="3">3 Personas</option>
+                        <option value="4">4 Personas</option>
+                        <option value="5">5 o más Personas</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="peticiones">Peticiones Especiales (Opcional)</label>
+                <textarea id="peticiones" name="peticiones" rows="4" placeholder="¿Alguna preferencia de camas, requerimientos o servicios adicionales?"></textarea>
+            </div>
+
+            <div class="centro-formulario">
+                <button type="submit" class="btn-habitaciones">Confirmar Reserva</button>
+            </div>
+        </form>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Hotel Rincón del Carmen. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitacion4</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/habitaciones.css">
+    <script src="js/habitaciones.js" defer></script>
+</head>
+<body data-habitacion-id="4">
+    <div class="habitacion-wrapper">
+
+        <header class="habitacion-header">
+            <h1 id="habitacion-nombre">Habitacion4</h1>
+            <p id="habitacion-ubicacion" class="ubicacion">Ubicacion</p>
+        </header>
+
+        <div class="contenedor-principal">
+            <div class="foto-container">
+                <div class="foto-placeholder" id="foto-placeholder">
+                    <img src="images\habitacion-superfamiliar.png" alt="suite presidencial" id="habitacion-foto" class="habitacion-foto">
+                </div>
+            </div>
+
+            <div class="descripcion-container">
+                <h2>Descripcion</h2>
+                <p id="habitacion-descripcion">Descripcion de la habitacion</p>
+                <button class="btn-habitaciones" onclick="window.location.href='reservas.html'">Reservar esta habitación</button>
+            </div>
+        </div>
+
+        <section class="detalles-section">
+            <h2>Detalles de la habitacion</h2>
+            <div class="detalles-grid">
+                <div class="detalle-item">
+                    <span class="detalle-label">NNumero de habitacion</span>
+                    <span class="detalle-valor" id="habitacion-numero"></span>
+                </div>
+                <div class="detalle-item">
+                    <span class="detalle-label">area</span>
+                    <span class="detalle-valor" id="habitacion-area"></span>
+                </div>
+                <div class="detalle-item">
+                    <span class="detalle-label">Camas</span>
+                    <span class="detalle-valor" id="habitacion-camas"></span>
+                </div>
+                <div class="detalle-item">
+                    <span class="detalle-label">Maximo de personas</span>
+                    <span class="detalle-valor" id="habitacion-personas"></span>
+                </div>
+                <div class="detalle-item">
+                    <span class="detalle-label">Precio por noche</span>
+                    <span class="detalle-valor" id="habitacion-precio"></span>
+                </div>
+                <div class="detalle-item">
+                    <span class="detalle-label">Disponibilidad</span>
+                    <span class="detalle-valor" id="habitacion-disponibilidad"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="servicios-section">
+            <h2>Servicios de la habitacion</h2>
+            <ul class="servicios-lista" id="servicios-habitacion"></ul>
+        </section>
+
+        <section class="servicios-section">
+            <h2>Servicios del hotel</h2>
+            <ul class="servicios-lista" id="servicios-hotel"></ul>
+        </section>
+
+        <section class="contacto-section">
+            <h2>Contacto para reserva</h2>
+            <p id="contacto-reserva" class="contacto-valor"></p>
+            <button class="btn-reservar" onclick="window.location.href='Inicio.html'">Regresar al inicio</button>
+        </section>
+
+    </div>
+</body>
+</html>

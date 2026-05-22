@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/inicio.css">
+    <script src="js/inicio.js" defer></script>
+    <script src="js/auth-nav.js" defer></script>
+    <title>Hotel Rincon del Carmen</title>
+</head>
+
+<body>
+
+  <!-- ===== HEADER STICKY ===== -->
+  <header class="header">
+    <h1>Hotel Rincón del Carmen</h1>
+    <nav>
+      <a href="index.html" class="nav-link" id="cerrar-sesion">Cerrar sesión</a>
+      <a href="reservas.html" class="nav-link">Reservar</a>
+      <a href="panelcontrol.html" class="nav-link" id="nav-panelcontrol">Panel de Control</a>
+      <a href="tus_reservas.html" class="nav-link nav-perfil" id="nav-tus-reservas" title="Mis-reservas">Mis Reservas</a>
+      <a href="contacto.html" class="nav-link nav-contacto" title="Contacto">✉</a>
+      <a href="perfil.html" class="nav-link nav-perfil" title="Mi cuenta">
+        <img src="images\perfil-logo.png" alt="Mi cuenta" class="nav-avatar">
+      </a>
+    </nav>
+  </header>
+
+
+  <!-- ===== BIENVENIDA ===== -->
+  <div class="container" id="inicio">
+    <div class="container-text">
+      <h2>Bienvenido al <span class="resaltado">hotel Rincón del Carmen</span></h2>
+      <p>Disfruta de una estancia inolvidable en el corazón de la naturaleza,
+        con todas las comodidades y servicios que ofrecemos para tu confort y relajación.</p>
+    </div>
+    <div class="container-img">
+      <img src="images/hotel.png" alt="Hotel Rincon del Carmen" class="hotel-img">
+    </div>
+  </div>
+
+
+  <!-- ===== MENÚ DE NAVEGACIÓN RÁPIDA ===== -->
+  <div class="menu-rapido">
+    <div class="menu-rapido-inner">
+      <p class="menu-rapido-titulo">Explora el hotel</p>
+      <div class="menu-rapido-botones">
+        <button class="btn-menu" data-target="habitaciones">🛏️ Habitaciones</button>
+        <button class="btn-menu" data-target="buffet">🍽️ Buffet</button>
+        <button class="btn-menu" data-target="gym">💪 Gimnasio</button>
+        <button class="btn-menu" data-target="spa">🧖 Spa</button>
+        <button class="btn-menu" data-target="zonas-humedas">🏊 Zonas Húmedas</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== SECCIÓN: HABITACIONES ===== -->
+  <section id="habitaciones" class="seccion-titulo-wrapper">
+    <div class="seccion-titulo">
+      <h2>Nuestras <span class="resaltado">Habitaciones</span></h2>
+      <p class="seccion-subtitulo">Cada espacio diseñado para brindarte el máximo confort y una experiencia única</p>
+    </div>
+
+    <!-- Suite Presidencial -->
+    <div id="suite-presidencial" class="habitacion-card">
+      <div class="habitacion-img-wrap">
+        <img src="images/suite.png" alt="Suite presidencial del Hotel Rincon del Carmen">
+      </div>
+      <div class="habitacion-info">
+        <h3>Suite <span class="resaltado">Presidencial</span></h3>
+        <p>Disfruta de la máxima comodidad y lujo en nuestra suite presidencial, diseñada para ofrecer una estancia exclusiva con sala privada y detalles de alta gama.</p>
+        <p>Ideal para parejas o viajeros que buscan un ambiente elegante, con servicios VIP, decoración sofisticada y atención personalizada en cada detalle.</p>
+        <button class="btn-habitaciones" onclick="window.location.href='habitacion1.html'">Reservar esta habitación</button>
+      </div>
+    </div>
+
+    <!-- Suite junior -->
+    <div id="penthouse" class="habitacion-card invertida">
+      <div class="habitacion-img-wrap">
+        <img src="images\habitacion-normal.png" alt="Suite junior del Hotel Rincon del Carmen">
+      </div>
+      <div class="habitacion-info">
+        <h3><span class="resaltado">Suite Junior</span></h3>
+        <p>Una habitación moderna con sala de estar y vista al jardín, pensada para ofrecer confort y privacidad sin sacrificar estilo.</p>
+        <p>Perfecta para estancias relajadas, con servicios premium como minibar, Wi-Fi rápido y una atmósfera cálida para descansar después de un día de actividades.</p>
+        <button class="btn-habitaciones" onclick="window.location.href='habitacion2.html'">Reservar esta habitación</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Doble Deluxe -->
+    <div id="suite-presidencial" class="habitacion-card">
+      <div class="habitacion-img-wrap">
+        <img src="images\penthouse.png" alt="Doble Deluxe del Hotel Rincon del Carmen">
+      </div>
+      <div class="habitacion-info">
+        <h3>Doble <span class="resaltado">Deluxe</span></h3>
+        <p>Disfruta de una habitación elegante con cama doble y baño privado, pensada para el descanso absoluto de parejas o viajeros solos.</p>
+        <p>Con un diseño cuidado y servicios esenciales de calidad, esta opción ofrece confort moderno y un ambiente acogedor en cada estancia.</p>
+        <button class="btn-habitaciones" onclick="window.location.href='habitacion3.html'">Reservar esta habitación</button>
+      </div>
+    </div>
+
+  <!-- Familiar Superior -->
+    <div id="penthouse" class="habitacion-card invertida">
+      <div class="habitacion-img-wrap">
+        <img src="images\habitacion-superfamiliar.png" alt="Familiar Superior del Hotel Rincon del Carmen">
+      </div>
+      <div class="habitacion-info">
+        <h3><span class="resaltado">Familiar Superior</span></h3>
+        <p>Una habitación amplia diseñada para familias, con varias áreas de descanso y baño con ducha doble para mayor comodidad.</p>
+        <p>Perfecta para grupos o parejas con niños, ofrece espacio adicional, servicios completos y una atmósfera tranquila para disfrutar juntos.</p>
+        <button class="btn-habitaciones" onclick="window.location.href='habitacion4.html'">Reservar esta habitación</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Individual Ejecutiva -->
+    <div id="suite-presidencial" class="habitacion-card">
+      <div class="habitacion-img-wrap">
+        <img src="images\habitacion-normal.png" alt="Individual Ejecutiva del Hotel Rincon del Carmen">
+      </div>
+      <div class="habitacion-info">
+        <h3>Individual <span class="resaltado">Ejecutiva</span></h3>
+        <p>Una opción práctica y silenciosa para viajeros de negocio, con escritorio y conexión rápida para trabajar con comodidad.</p>
+        <p>Perfecta para estancias cortas, ofrece privacidad, servicios funcionales y un ambiente moderno que facilita el descanso tras un día de reuniones.</p>
+        <button class="btn-habitaciones" onclick="window.location.href='habitacion5.html'">Reservar esta habitación</button>
+      </div>
+    </div>
+
+
+  <!-- ===== SECCIÓN: INSTALACIONES ===== -->
+  <section class="seccion-titulo-wrapper" id="instalaciones">
+    <div class="seccion-titulo">
+      <h2>Nuestras <span class="resaltado">Instalaciones</span></h2>
+      <p class="seccion-subtitulo">Todo lo que necesitas para disfrutar al máximo, en un solo lugar</p>
+    </div>
+
+    <!-- Buffet -->
+    <div id="buffet" class="instalacion-bloque">
+      <div class="instalacion-label">Gastronomía</div>
+      <div class="instalacion-contenido">
+        <div class="instalacion-texto">
+          <h3>Nuestro <span class="resaltado">Buffet Internacional</span></h3>
+          <p>Disfruta de una amplia selección de platillos deliciosos en nuestro buffet, con opciones para todos los gustos y dietas, preparado por nuestros chefs expertos. ¡Ven y deleita tu paladar con nuestra oferta gastronómica de primera calidad!</p>
+        </div>
+        <div class="buffet-img-container instalacion-imagen">
+          <div class="carrusel-track">
+            <img src="images/buffet.png" alt="Buffet Rincón del Carmen" class="buffet-img active">
+            <img src="images/buffet1.png" alt="Buffet Rincón del Carmen" class="buffet-img">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gimnasio -->
+    <div id="gym" class="instalacion-bloque invertida">
+      <div class="instalacion-label">Fitness</div>
+      <div class="instalacion-contenido">
+        <div class="gym-img-container instalacion-imagen">
+          <div class="carrusel-track">
+            <img src="images/gym.png"  alt="Gimnasio del Hotel Rincon del Carmen" class="gym-img active">
+            <img src="images/gym2.png" alt="Gimnasio del Hotel Rincon del Carmen" class="gym-img">
+            <img src="images/gym1.png" alt="Gimnasio del Hotel Rincon del Carmen" class="gym-img">
+          </div>
+        </div>
+        <div class="instalacion-texto">
+          <h3>Nuestro <span class="resaltado">Gimnasio</span></h3>
+          <p>Mantente en forma durante tu estancia con nuestro gimnasio equipado con las últimas máquinas y un ambiente motivador para tu entrenamiento. ¡Tu bienestar es nuestra prioridad!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spa -->
+    <div id="spa" class="instalacion-bloque">
+      <div class="instalacion-label">Bienestar</div>
+      <div class="instalacion-contenido">
+        <div class="instalacion-texto">
+          <h3>Nuestro <span class="resaltado">Spa</span></h3>
+          <p>Libera el estrés y revitaliza tu cuerpo con nuestros servicios de spa de alta gama en un ambiente de tranquilidad y lujo. ¡Tu oasis de relajación te espera en el Hotel Rincón del Carmen!</p>
+        </div>
+        <div class="spa-img-container instalacion-imagen">
+          <div class="carrusel-track">
+            <img src="images/spa1.png" alt="Spa del Hotel Rincon del Carmen" class="spa-img active">
+            <img src="images/spa2.png" alt="Spa del Hotel Rincon del Carmen" class="spa-img">
+            <img src="images/spa3.png" alt="Spa del Hotel Rincon del Carmen" class="spa-img">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zonas Húmedas -->
+    <div id="zonas-humedas" class="instalacion-bloque invertida">
+      <div class="instalacion-label">Acuático</div>
+      <div class="instalacion-contenido">
+        <div class="zonas-humedas-img-container instalacion-imagen">
+          <div class="carrusel-track">
+            <img src="images/zonas-humedas.png"  alt="Zonas humedas del Hotel Rincon del Carmen" class="zonas-humedas-img active">
+            <img src="images/zonas-humedas1.png" alt="Zonas humedas del Hotel Rincon del Carmen" class="zonas-humedas-img">
+          </div>
+        </div>
+        <div class="instalacion-texto">
+          <h3>Nuestras <span class="resaltado">Zonas Húmedas</span></h3>
+          <p>Disfruta de los beneficios de nuestras zonas húmedas. Contamos con una hermosa piscina y unos relajantes jacuzzis para una experiencia de relajación única.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2026 Hotel Rincón del Carmen. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>

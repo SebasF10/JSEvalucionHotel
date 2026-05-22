@@ -1,0 +1,8 @@
+{
+  "admin": {
+    "nombres": "administrador",
+    "email": "admin@plataforma.com",
+    "contraseña": "Admin1234",
+    "rol": "admin"
+  }
+}

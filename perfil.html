@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/perfil.css">
+    <script src="js/perfil.js" defer></script>
+</head>
+<body>
+
+    <div class="perfil-wrapper">
+
+        <!-- Foto de perfil -->
+        <div class="avatar-container">
+            <div class="avatar-ring">
+                <img id="foto-perfil" src="images/perfil-logo.png" alt="Foto de perfil">
+            </div>
+        </div>
+
+        <!-- Nombre grande -->
+        <h1 id="perfil-nombres" class="perfil-nombre">Cargando...</h1>
+
+        <!-- Badge de rol -->
+        <div id="perfil-rol-badge" class="rol-badge">usuario</div>
+
+        <!-- Tarjeta de datos -->
+        <div class="datos-card">
+            <h2 class="datos-titulo">Información de la cuenta</h2>
+
+            <div class="dato-fila">
+                <span class="dato-icono">✉</span>
+                <div>
+                    <span class="dato-label">Correo electrónico</span>
+                    <span class="dato-valor" id="perfil-email">—</span>
+                </div>
+            </div>
+
+            <div class="dato-fila" id="fila-identificacion">
+                <span class="dato-icono">🪪</span>
+                <div>
+                    <span class="dato-label">Identificación</span>
+                    <span class="dato-valor" id="perfil-identificacion">—</span>
+                </div>
+            </div>
+
+            <div class="dato-fila" id="fila-telefono">
+                <span class="dato-icono">📞</span>
+                <div>
+                    <span class="dato-label">Teléfono</span>
+                    <span class="dato-valor" id="perfil-telefono">—</span>
+                </div>
+            </div>
+
+            <div class="dato-fila" id="fila-nacionalidad">
+                <span class="dato-icono">🌎</span>
+                <div>
+                    <span class="dato-label">Nacionalidad</span>
+                    <span class="dato-valor" id="perfil-nacionalidad">—</span>
+                </div>
+            </div>
+
+            <div class="dato-fila">
+                <span class="dato-icono">🔐</span>
+                <div>
+                    <span class="dato-label">Rol en la plataforma</span>
+                    <span class="dato-valor" id="perfil-rol-texto">—</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== MIS RESERVAS (solo usuarios, oculto para admin) ===== -->
+        <div class="reservas-section" id="seccion-mis-reservas">
+            <h2 class="datos-titulo reservas-titulo"> Mis Reservas</h2>
+            <div id="lista-mis-reservas">
+                <!-- Se llena con JS -->
+            </div>
+        </div>
+
+        <!-- Botón regresar -->
+        <button class="boton" onclick="window.location.href='Inicio.html'">← Regresar al inicio</button>
+
+    </div>
+</body>
+</html>

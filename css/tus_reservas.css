@@ -1,0 +1,97 @@
+/* Mantiene la estética del header y fondo */
+@import url("reservas.css");
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-reservas {
+    max-width: 900px;
+    margin: 0 auto 80px auto;
+    padding: 0 20px;
+}
+
+.lista-reservas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-reserva {
+    background-color: #161616;
+    border: 2px solid #F7931A;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    color: #ffffff;
+}
+
+.card-reserva h3 {
+    margin: 0 0 10px 0;
+    color: #F7931A;
+}
+
+.card-reserva p {
+    margin: 4px 0;
+    font-size: 15px;
+}
+
+.card-reserva .btn-cancelar {
+    margin-top: 12px;
+    padding: 10px 20px;
+    background-color: #F7931A;
+    color: #0D0D0D;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.card-reserva .btn-cancelar:hover {
+    background-color: #d97f12;
+}
+
+@media (max-width: 600px) {
+    .contenedor-reservas {
+        padding: 0 14px;
+        margin-top: 20px;
+    }
+
+    .card-reserva {
+        padding: 18px 16px;
+    }
+
+    .card-reserva h3 {
+        font-size: 20px;
+    }
+
+    .card-reserva p {
+        font-size: 14px;
+    }
+
+    .card-reserva .btn-cancelar {
+        width: 100%;
+        padding: 12px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-reservas {
+        padding: 0 12px;
+    }
+
+    .card-reserva {
+        padding: 16px 14px;
+    }
+
+    .card-reserva h3 {
+        font-size: 18px;
+    }
+
+    .card-reserva p {
+        font-size: 13px;
+    }
+}

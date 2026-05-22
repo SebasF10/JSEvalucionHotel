@@ -1,0 +1,321 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0D0D0D;
+    color: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 16px;
+}
+
+/* ===== WRAPPER ===== */
+.perfil-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 480px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== AVATAR ===== */
+.avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar-ring {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #F7931A;
+    padding: 4px;
+    background: #1A1A1A;
+    box-shadow: 0 0 24px rgba(247, 147, 26, 0.3);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.avatar-ring:hover {
+    box-shadow: 0 0 28px rgba(247, 147, 26, 0.55);
+}
+
+.avatar-ring img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ===== NOMBRE ===== */
+.perfil-nombre {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ===== BADGE ROL ===== */
+.rol-badge {
+    display: inline-block;
+    padding: 4px 18px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    background: rgba(247, 147, 26, 0.15);
+    border: 1.5px solid #F7931A;
+    color: #F7931A;
+}
+
+.rol-badge.admin {
+    background: rgba(247, 147, 26, 0.3);
+    box-shadow: 0 0 12px rgba(247, 147, 26, 0.4);
+}
+
+/* ===== TARJETA DE DATOS ===== */
+.datos-card {
+    background: #1A1A1A;
+    border: 1px solid #F7931A;
+    border-radius: 18px;
+    padding: 32px;
+    width: 100%;
+    margin-bottom: 28px;
+    transition: transform 0.3s ease;
+}
+
+.datos-card:hover {
+    transform: translateY(-3px);
+}
+
+.datos-titulo {
+    font-size: 15px;
+    font-weight: 700;
+    color: #F7931A;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+/* ===== FILA DE DATO ===== */
+.dato-fila {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid #2A2A2A;
+}
+
+.dato-fila:last-child {
+    border-bottom: none;
+}
+
+.dato-icono {
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.dato-label {
+    display: block;
+    font-size: 11px;
+    color: #888;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.dato-valor {
+    display: block;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 500;
+    word-break: break-all;
+}
+
+/* ===== SECCIÓN MIS RESERVAS ===== */
+.reservas-section {
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+.reservas-titulo {
+    margin-bottom: 16px;
+}
+
+/* ── Estado vacío ── */
+.reserva-vacia {
+    background: #1A1A1A;
+    border: 1px solid #2A2A2A;
+    border-radius: 14px;
+    padding: 36px 24px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+.reserva-vacia-icono {
+    display: block;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+/* ── Tarjeta de reserva ── */
+.reserva-card {
+    background: #1A1A1A;
+    border: 1px solid #2A2A2A;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 14px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.reserva-card:hover {
+    border-color: #F7931A;
+    transform: translateY(-2px);
+}
+
+.reserva-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: #212121;
+    border-bottom: 1px solid #2A2A2A;
+}
+
+.reserva-hab-nombre {
+    font-size: 15px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.reserva-badge {
+    padding: 3px 12px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    background: #1a3d10;
+    color: #8ed06a;
+    border: 1px solid #2a5c18;
+}
+
+.reserva-card__body {
+    padding: 18px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.reserva-dato {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.reserva-dato--full {
+    grid-column: 1 / -1;
+}
+
+.reserva-icono {
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.reserva-label {
+    display: block;
+    font-size: 10px;
+    color: #666;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.reserva-valor {
+    display: block;
+    font-size: 13px;
+    color: #E0E0E0;
+    font-weight: 500;
+}
+
+/* ===== BOTÓN ===== */
+.boton {
+    padding: 14px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background: #F7931A;
+    color: #0D0D0D;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.boton:hover {
+    background: #FFA733;
+    transform: scale(1.02);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 30px 14px;
+    }
+
+    .perfil-wrapper {
+        padding: 0 12px;
+    }
+
+    .reserva-card__header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .reserva-card__body {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .datos-card {
+        padding: 24px 20px;
+    }
+
+    .perfil-nombre {
+        font-size: 20px;
+    }
+
+    .reserva-card__header {
+        justify-content: center;
+    }
+
+    .reserva-card__body {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}

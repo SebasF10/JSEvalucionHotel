@@ -1,0 +1,135 @@
+{
+  "habitaciones": [
+    {
+      "id": 1,
+      "accion_hotel": "Reserva",
+      "nombre": "Suite Presidencial",
+      "habitacion_numero": 101,
+      "area_m2": 72,
+      "ubicacion": "Torre Este",
+      "precio_por_noche": 420000,
+      "camas": 1,
+      "max_personas": 2,
+      "disponibilidad": true,
+      "descripcion": "Disfruta de la máxima comodidad y lujo en nuestra suite presidencial, diseñada para ofrecer una estancia exclusiva con sala privada y detalles de alta gama. Ideal para parejas o viajeros que buscan un ambiente elegante, con servicios VIP, decoración sofisticada y atención personalizada en cada detalle.",
+      "servicios": [
+        "Internet Wi-Fi",
+        "Minibar",
+        "Jacuzzi",
+        "Aire acondicionado",
+        "TV satelital",
+        "Caja fuerte",
+        "Piano de cola"
+      ],
+      "servicios_hotel": [
+        "Restaurante y desayuno incluido",
+        "Spa",
+        "Zona húmeda"
+      ],
+      "contacto_reserva": "+57 310 123 4567"
+    },
+    {
+      "id": 2,
+      "accion_hotel": "Reserva",
+      "nombre": "Suite Junior",
+      "habitacion_numero": 202,
+      "area_m2": 54,
+      "ubicacion": "Torre Central",
+      "precio_por_noche": 320000,
+      "camas": 2,
+      "max_personas": 3,
+      "disponibilidad": true,
+      "descripcion": "Una habitación moderna con sala de estar y vista al jardín, pensada para ofrecer confort y privacidad sin sacrificar estilo. Perfecta para estancias relajadas, con servicios premium como minibar, Wi-Fi rápido y una atmósfera cálida para descansar después de un día de actividades.",
+      "servicios": [
+        "Internet Wi-Fi",
+        "Minibar",
+        "Aire acondicionado",
+        "TV de pantalla plana",
+        "Ducha de hidromasaje"
+      ],
+      "servicios_hotel": [
+        "Desayuno buffet",
+        "Spa",
+        "Zonas húmedas"
+      ],
+      "contacto_reserva": "+57 310 123 4567"
+    },
+    {
+      "id": 3,
+      "accion_hotel": "Reserva",
+      "nombre": "Doble Deluxe",
+      "habitacion_numero": 305,
+      "area_m2": 36,
+      "ubicacion": "Torre Oeste",
+      "precio_por_noche": 220000,
+      "camas": 2,
+      "max_personas": 2,
+      "disponibilidad": true,
+      "descripcion": "Disfruta de una habitación elegante con cama doble y baño privado, pensada para el descanso absoluto de parejas o viajeros solos. Con un diseño cuidado y servicios esenciales de calidad, esta opción ofrece confort moderno y un ambiente acogedor en cada estancia.",
+      "servicios": [
+        "Internet Wi-Fi",
+        "Minibar",
+        "Aire acondicionado",
+        "TV",
+        "Caja fuerte"
+      ],
+      "servicios_hotel": [
+        "Restaurante",
+        "Piscina",
+        "Zona húmeda"
+      ],
+      "contacto_reserva": "+57 310 123 4567"
+    },
+    {
+      "id": 4,
+      "accion_hotel": "Reserva",
+      "nombre": "Familiar Superior",
+      "habitacion_numero": 410,
+      "area_m2": 60,
+      "ubicacion": "Torre Jardín",
+      "precio_por_noche": 360000,
+      "camas": 3,
+      "max_personas": 5,
+      "disponibilidad": false,
+      "descripcion": "Una habitación amplia diseñada para familias, con varias áreas de descanso y baño con ducha doble para mayor comodidad. Perfecta para grupos o parejas con niños, ofrece espacio adicional, servicios completos y una atmósfera tranquila para disfrutar juntos.",
+      "servicios": [
+        "Internet Wi-Fi",
+        "Minibar",
+        "Aire acondicionado",
+        "TV",
+        "Silla de trabajo"
+      ],
+      "servicios_hotel": [
+        "Restaurante",
+        "Spa",
+        "Zonas húmedas"
+      ],
+      "contacto_reserva": "+57 310 123 4567"
+    },
+    {
+      "id": 5,
+      "accion_hotel": "Reserva",
+      "nombre": "Individual Ejecutiva",
+      "habitacion_numero": 517,
+      "area_m2": 28,
+      "ubicacion": "Torre Negocios",
+      "precio_por_noche": 180000,
+      "camas": 1,
+      "max_personas": 1,
+      "disponibilidad": true,
+      "descripcion": "Una opción práctica y silenciosa para viajeros de negocio, con escritorio y conexión rápida para trabajar con comodidad. Perfecta para estancias cortas, ofrece privacidad, servicios funcionales y un ambiente moderno que facilita el descanso tras un día de reuniones.",
+      "servicios": [
+        "Internet Wi-Fi",
+        "Aire acondicionado",
+        "TV",
+        "Escritorio de trabajo"
+      ],
+      "servicios_hotel": [
+        "Comidas",
+        "Spa",
+        "Zona húmeda"
+      ],
+      "contacto_reserva": "+57 310 123 4567"
+    }
+  ]
+}

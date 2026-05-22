@@ -1,0 +1,263 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0D0D0D;
+    color: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 16px;
+}
+
+/* ===== WRAPPER ===== */
+.contacto-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 480px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== HEADER ===== */
+.contacto-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.header-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #F7931A;
+    background: #1A1A1A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contacto-titulo {
+    font-size: 32px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+/* ===== AVATAR ===== */
+.avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar-ring {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #F7931A;
+    padding: 4px;
+    background: #1A1A1A;
+    box-shadow: 0 0 24px rgba(247, 147, 26, 0.3);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.avatar-ring:hover {
+    box-shadow: 0 0 28px rgba(247, 147, 26, 0.55);
+}
+
+.avatar-ring img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ===== NOMBRE ===== */
+.perfil-nombre {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ===== BADGE ROL ===== */
+.rol-badge {
+    display: inline-block;
+    padding: 4px 18px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    background: rgba(247, 147, 26, 0.15);
+    border: 1.5px solid #F7931A;
+    color: #F7931A;
+}
+
+.rol-badge.admin {
+    background: rgba(247, 147, 26, 0.3);
+    box-shadow: 0 0 12px rgba(247, 147, 26, 0.4);
+}
+
+/* ===== TARJETA DE DATOS ===== */
+.datos-card {
+    background: #1A1A1A;
+    border: 1px solid #F7931A;
+    border-radius: 18px;
+    padding: 32px;
+    width: 100%;
+    margin-bottom: 28px;
+    transition: transform 0.3s ease;
+}
+
+.datos-card:hover {
+    transform: translateY(-3px);
+}
+
+.datos-titulo {
+    font-size: 15px;
+    font-weight: 700;
+    color: #F7931A;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+/* ===== FILA DE DATO ===== */
+.dato-fila {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid #2A2A2A;
+}
+
+.dato-fila:last-child {
+    border-bottom: none;
+}
+
+.dato-icono {
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.dato-label {
+    display: block;
+    font-size: 11px;
+    color: #888;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.dato-valor {
+    display: block;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 500;
+    word-break: break-all;
+}
+
+/* ===== BOTÓN ===== */
+.boton {
+    padding: 14px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background: #F7931A;
+    color: #0D0D0D;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.boton:hover {
+    background: #FFA733;
+    transform: scale(1.02);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 32px 14px;
+    }
+
+    .contacto-wrapper {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .contacto-header {
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+    }
+
+    .header-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contacto-titulo {
+        font-size: 28px;
+    }
+
+    .avatar-ring {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 24px 12px;
+    }
+
+    .datos-card {
+        padding: 24px 18px;
+    }
+
+    .contacto-titulo {
+        font-size: 26px;
+    }
+
+    .perfil-nombre {
+        font-size: 20px;
+    }
+
+    .boton {
+        padding: 14px;
+        font-size: 14px;
+    }
+}

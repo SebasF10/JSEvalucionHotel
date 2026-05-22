@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/panelcontrol.css">
+    <script src="js/panelcontrol.js" defer></script>
+    <title>Panel de Control — Hotel Rincón del Carmen</title>
+</head>
+<body>
+
+    <!-- ===== HEADER IGUAL AL INICIO ===== -->
+    <header>
+        <h1>Hotel Rincón del Carmen</h1>
+        <nav>
+            <a href="index.html" class="nav-link" id="cerrar-sesion">Cerrar sesión</a>
+            <a href="reservas.html" class="nav-link">Reservas</a>
+            <a href="tus_reservas.html" class="nav-link nav-perfil" id="nav-tus-reservas" title="Mis-reservas">Mis Reservas</a>
+            <a href="contacto.html" class="nav-link nav-contacto" title="Contacto">✉</a>
+            <a href="perfil.html" class="nav-link nav-perfil" title="Mi cuenta">
+                <img src="images/perfil-logo.png" alt="Mi cuenta" class="nav-avatar">
+            </a>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <div class="page-header">
+            <h2>Panel de <span class="resaltado">Control</span></h2>
+            <p>Selecciona una habitación para ver y editar su información.</p>
+        </div>
+
+        <div class="rooms-list">
+
+            <!-- Habitación 1 -->
+            <article class="room-item" data-id="1">
+                <button class="room-trigger" aria-expanded="false">
+                    <div class="room-trigger__info">
+                        <span class="room-num">101</span>
+                        <div class="room-title-block">
+                            <span class="room-name">Suite Presidencial</span>
+                            <span class="room-meta">Torre Este · 72 m²</span>
+                        </div>
+                    </div>
+                    <div class="room-trigger__right">
+                        <span class="badge badge--on">Disponible</span>
+                        <span class="room-price">$420.000<small>/noche</small></span>
+                        <span class="chevron">▾</span>
+                    </div>
+                </button>
+                <div class="room-panel">
+                    <div class="room-panel__inner">
+                        <img src="images/suite.png" alt="Suite Presidencial" class="panel-img">
+                        <form class="room-form" data-room-id="1">
+                            <div class="form-grid">
+                                <label class="field"><span>Precio / noche (COP)</span><input type="number" name="precio" value="420000"></label>
+                                <label class="field"><span>N.° habitación</span><input type="number" name="numero" value="101"></label>
+                                <label class="field"><span>Área (m²)</span><input type="number" name="area" value="72"></label>
+                                <label class="field"><span>Personas (máx.)</span><input type="number" name="personas" value="2"></label>
+                                <label class="field"><span>Camas</span><input type="number" name="camas" value="1"></label>
+                                <label class="field"><span>Ubicación</span><input type="text" name="ubicacion" value="Torre Este"></label>
+                            </div>
+                            <label class="field field--full">
+                                <span>Disponibilidad</span>
+                                <div class="radio-group">
+                                    <label class="radio-opt"><input type="radio" name="disp_1" value="true" checked><span class="radio-label radio-label--on">Disponible</span></label>
+                                    <label class="radio-opt"><input type="radio" name="disp_1" value="false"><span class="radio-label radio-label--off">No disponible</span></label>
+                                </div>
+                            </label>
+                            <label class="field field--full">
+                                <span>Descripción</span>
+                                <textarea name="descripcion" rows="3">Disfruta de la máxima comodidad y lujo en nuestra suite presidencial, diseñada para ofrecer una estancia exclusiva con sala privada y detalles de alta gama.</textarea>
+                            </label>
+                            <label class="field field--full">
+                                <span>Servicios de la habitación</span>
+                                <div class="tags-list" data-field="servicios">
+                                    <span class="tag">Internet Wi-Fi<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">Minibar<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">Jacuzzi<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">Aire acondicionado<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">TV satelital<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">Caja fuerte<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">Piano de cola<button type="button" class="tag-x">×</button></span>
+                                </div>
+                                <div class="tag-add"><input type="text" class="tag-input" placeholder="Nuevo servicio…"><button type="button" class="btn-add">+ Agregar</button></div>
+                            </label>
+                            <label class="field field--full">
+                                <span>Servicios del hotel incluidos</span>
+                                <div class="tags-list" data-field="servicios_hotel">
+                                    <span class="tag tag--hotel">Restaurante y desayuno<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag tag--hotel">Spa<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag tag--hotel">Zona húmeda<button type="button" class="tag-x">×</button></span>
+                                </div>
+                                <div class="tag-add"><input type="text" class="tag-input" placeholder="Nuevo servicio…"><button type="button" class="btn-add">+ Agregar</button></div>
+                            </label>
+                            <label class="field">
+                                <span>Teléfono / WhatsApp</span>
+                                <input type="text" name="contacto" value="+57 310 123 4567">
+                            </label>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn--cancel">Cancelar</button>
+                                <button type="button" class="btn btn--save">Guardar cambios</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Habitación 2 -->
+            <article class="room-item" data-id="2">
+                <button class="room-trigger" aria-expanded="false">
+                    <div class="room-trigger__info">
+                        <span class="room-num">202</span>
+                        <div class="room-title-block">
+                            <span class="room-name">Suite Junior</span>
+                            <span class="room-meta">Torre Central · 54 m²</span>
+                        </div>
+                    </div>
+                    <div class="room-trigger__right">
+                        <span class="badge badge--on">Disponible</span>
+                        <span class="room-price">$320.000<small>/noche</small></span>
+                        <span class="chevron">▾</span>
+                    </div>
+                </button>
+                <div class="room-panel">
+                    <div class="room-panel__inner">
+                        <img src="images/habitacion-normal.png" alt="Suite Junior" class="panel-img">
+                        <form class="room-form" data-room-id="2">
+                            <div class="form-grid">
+                                <label class="field"><span>Precio / noche (COP)</span><input type="number" name="precio" value="320000"></label>
+                                <label class="field"><span>N.° habitación</span><input type="number" name="numero" value="202"></label>
+                                <label class="field"><span>Área (m²)</span><input type="number" name="area" value="54"></label>
+                                <label class="field"><span>Personas (máx.)</span><input type="number" name="personas" value="3"></label>
+                                <label class="field"><span>Camas</span><input type="number" name="camas" value="2"></label>
+                                <label class="field"><span>Ubicación</span><input type="text" name="ubicacion" value="Torre Central"></label>
+                            </div>
+                            <label class="field field--full">
+                                <span>Disponibilidad</span>
+                                <div class="radio-group">
+                                    <label class="radio-opt"><input type="radio" name="disp_2" value="true" checked><span class="radio-label radio-label--on">Disponible</span></label>
+                                    <label class="radio-opt"><input type="radio" name="disp_2" value="false"><span class="radio-label radio-label--off">No disponible</span></label>
+                                </div>
+                            </label>
+                            <label class="field field--full">
+                                <span>Descripción</span>
+                                <textarea name="descripcion" rows="3">Una habitación moderna con sala de estar y vista al jardín, pensada para ofrecer confort y privacidad sin sacrificar estilo.</textarea>
+                            </label>
+                            <label class="field field--full">
+                                <span>Servicios de la habitación</span>
+                                <div class="tags-list" data-field="servicios">
+                                    <span class="tag">Internet Wi-Fi<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">Minibar<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">Aire acondicionado<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">TV de pantalla plana<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">Ducha de hidromasaje<button type="button" class="tag-x">×</button></span>
+                                </div>
+                                <div class="tag-add"><input type="text" class="tag-input" placeholder="Nuevo servicio…"><button type="button" class="btn-add">+ Agregar</button></div>
+                            </label>
+                            <label class="field field--full">
+                                <span>Servicios del hotel incluidos</span>
+                                <div class="tags-list" data-field="servicios_hotel">
+                                    <span class="tag tag--hotel">Desayuno buffet<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag tag--hotel">Spa<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag tag--hotel">Zonas húmedas<button type="button" class="tag-x">×</button></span>
+                                </div>
+                                <div class="tag-add"><input type="text" class="tag-input" placeholder="Nuevo servicio…"><button type="button" class="btn-add">+ Agregar</button></div>
+                            </label>
+                            <label class="field">
+                                <span>Teléfono / WhatsApp</span>
+                                <input type="text" name="contacto" value="+57 310 123 4567">
+                            </label>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn--cancel">Cancelar</button>
+                                <button type="button" class="btn btn--save">Guardar cambios</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Habitación 3 -->
+            <article class="room-item" data-id="3">
+                <button class="room-trigger" aria-expanded="false">
+                    <div class="room-trigger__info">
+                        <span class="room-num">305</span>
+                        <div class="room-title-block">
+                            <span class="room-name">Doble Deluxe</span>
+                            <span class="room-meta">Torre Oeste · 36 m²</span>
+                        </div>
+                    </div>
+                    <div class="room-trigger__right">
+                        <span class="badge badge--on">Disponible</span>
+                        <span class="room-price">$220.000<small>/noche</small></span>
+                        <span class="chevron">▾</span>
+                    </div>
+                </button>
+                <div class="room-panel">
+                    <div class="room-panel__inner">
+                        <img src="images/penthouse.png" alt="Doble Deluxe" class="panel-img">
+                        <form class="room-form" data-room-id="3">
+                            <div class="form-grid">
+                                <label class="field"><span>Precio / noche (COP)</span><input type="number" name="precio" value="220000"></label>
+                                <label class="field"><span>N.° habitación</span><input type="number" name="numero" value="305"></label>
+                                <label class="field"><span>Área (m²)</span><input type="number" name="area" value="36"></label>
+                                <label class="field"><span>Personas (máx.)</span><input type="number" name="personas" value="2"></label>
+                                <label class="field"><span>Camas</span><input type="number" name="camas" value="2"></label>
+                                <label class="field"><span>Ubicación</span><input type="text" name="ubicacion" value="Torre Oeste"></label>
+                            </div>
+                            <label class="field field--full">
+                                <span>Disponibilidad</span>
+                                <div class="radio-group">
+                                    <label class="radio-opt"><input type="radio" name="disp_3" value="true" checked><span class="radio-label radio-label--on">Disponible</span></label>
+                                    <label class="radio-opt"><input type="radio" name="disp_3" value="false"><span class="radio-label radio-label--off">No disponible</span></label>
+                                </div>
+                            </label>
+                            <label class="field field--full">
+                                <span>Descripción</span>
+                                <textarea name="descripcion" rows="3">Disfruta de una habitación elegante con cama doble y baño privado, pensada para el descanso absoluto de parejas o viajeros solos.</textarea>
+                            </label>
+                            <label class="field field--full">
+                                <span>Servicios de la habitación</span>
+                                <div class="tags-list" data-field="servicios">
+                                    <span class="tag">Internet Wi-Fi<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">Minibar<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">Aire acondicionado<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">TV<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">Caja fuerte<button type="button" class="tag-x">×</button></span>
+                                </div>
+                                <div class="tag-add"><input type="text" class="tag-input" placeholder="Nuevo servicio…"><button type="button" class="btn-add">+ Agregar</button></div>
+                            </label>
+                            <label class="field field--full">
+                                <span>Servicios del hotel incluidos</span>
+                                <div class="tags-list" data-field="servicios_hotel">
+                                    <span class="tag tag--hotel">Restaurante<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag tag--hotel">Piscina<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag tag--hotel">Zona húmeda<button type="button" class="tag-x">×</button></span>
+                                </div>
+                                <div class="tag-add"><input type="text" class="tag-input" placeholder="Nuevo servicio…"><button type="button" class="btn-add">+ Agregar</button></div>
+                            </label>
+                            <label class="field">
+                                <span>Teléfono / WhatsApp</span>
+                                <input type="text" name="contacto" value="+57 310 123 4567">
+                            </label>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn--cancel">Cancelar</button>
+                                <button type="button" class="btn btn--save">Guardar cambios</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Habitación 4 -->
+            <article class="room-item" data-id="4">
+                <button class="room-trigger" aria-expanded="false">
+                    <div class="room-trigger__info">
+                        <span class="room-num">410</span>
+                        <div class="room-title-block">
+                            <span class="room-name">Familiar Superior</span>
+                            <span class="room-meta">Torre Jardín · 60 m²</span>
+                        </div>
+                    </div>
+                    <div class="room-trigger__right">
+                        <span class="badge badge--off">No disponible</span>
+                        <span class="room-price">$360.000<small>/noche</small></span>
+                        <span class="chevron">▾</span>
+                    </div>
+                </button>
+                <div class="room-panel">
+                    <div class="room-panel__inner">
+                        <img src="images/familiar.png" alt="Familiar Superior" class="panel-img">
+                        <form class="room-form" data-room-id="4">
+                            <div class="form-grid">
+                                <label class="field"><span>Precio / noche (COP)</span><input type="number" name="precio" value="360000"></label>
+                                <label class="field"><span>N.° habitación</span><input type="number" name="numero" value="410"></label>
+                                <label class="field"><span>Área (m²)</span><input type="number" name="area" value="60"></label>
+                                <label class="field"><span>Personas (máx.)</span><input type="number" name="personas" value="5"></label>
+                                <label class="field"><span>Camas</span><input type="number" name="camas" value="3"></label>
+                                <label class="field"><span>Ubicación</span><input type="text" name="ubicacion" value="Torre Jardín"></label>
+                            </div>
+                            <label class="field field--full">
+                                <span>Disponibilidad</span>
+                                <div class="radio-group">
+                                    <label class="radio-opt"><input type="radio" name="disp_4" value="true"><span class="radio-label radio-label--on">Disponible</span></label>
+                                    <label class="radio-opt"><input type="radio" name="disp_4" value="false" checked><span class="radio-label radio-label--off">No disponible</span></label>
+                                </div>
+                            </label>
+                            <label class="field field--full">
+                                <span>Descripción</span>
+                                <textarea name="descripcion" rows="3">Una habitación amplia diseñada para familias, con varias áreas de descanso y baño con ducha doble para mayor comodidad.</textarea>
+                            </label>
+                            <label class="field field--full">
+                                <span>Servicios de la habitación</span>
+                                <div class="tags-list" data-field="servicios">
+                                    <span class="tag">Internet Wi-Fi<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">Minibar<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">Aire acondicionado<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">TV<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">Silla de trabajo<button type="button" class="tag-x">×</button></span>
+                                </div>
+                                <div class="tag-add"><input type="text" class="tag-input" placeholder="Nuevo servicio…"><button type="button" class="btn-add">+ Agregar</button></div>
+                            </label>
+                            <label class="field field--full">
+                                <span>Servicios del hotel incluidos</span>
+                                <div class="tags-list" data-field="servicios_hotel">
+                                    <span class="tag tag--hotel">Restaurante<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag tag--hotel">Spa<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag tag--hotel">Zonas húmedas<button type="button" class="tag-x">×</button></span>
+                                </div>
+                                <div class="tag-add"><input type="text" class="tag-input" placeholder="Nuevo servicio…"><button type="button" class="btn-add">+ Agregar</button></div>
+                            </label>
+                            <label class="field">
+                                <span>Teléfono / WhatsApp</span>
+                                <input type="text" name="contacto" value="+57 310 123 4567">
+                            </label>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn--cancel">Cancelar</button>
+                                <button type="button" class="btn btn--save">Guardar cambios</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Habitación 5 -->
+            <article class="room-item" data-id="5">
+                <button class="room-trigger" aria-expanded="false">
+                    <div class="room-trigger__info">
+                        <span class="room-num">517</span>
+                        <div class="room-title-block">
+                            <span class="room-name">Individual Ejecutiva</span>
+                            <span class="room-meta">Torre Negocios · 28 m²</span>
+                        </div>
+                    </div>
+                    <div class="room-trigger__right">
+                        <span class="badge badge--on">Disponible</span>
+                        <span class="room-price">$180.000<small>/noche</small></span>
+                        <span class="chevron">▾</span>
+                    </div>
+                </button>
+                <div class="room-panel">
+                    <div class="room-panel__inner">
+                        <img src="images\habitacion-normal.png" alt="Individual Ejecutiva" class="panel-img">
+                        <form class="room-form" data-room-id="5">
+                            <div class="form-grid">
+                                <label class="field"><span>Precio / noche (COP)</span><input type="number" name="precio" value="180000"></label>
+                                <label class="field"><span>N.° habitación</span><input type="number" name="numero" value="517"></label>
+                                <label class="field"><span>Área (m²)</span><input type="number" name="area" value="28"></label>
+                                <label class="field"><span>Personas (máx.)</span><input type="number" name="personas" value="1"></label>
+                                <label class="field"><span>Camas</span><input type="number" name="camas" value="1"></label>
+                                <label class="field"><span>Ubicación</span><input type="text" name="ubicacion" value="Torre Negocios"></label>
+                            </div>
+                            <label class="field field--full">
+                                <span>Disponibilidad</span>
+                                <div class="radio-group">
+                                    <label class="radio-opt"><input type="radio" name="disp_5" value="true" checked><span class="radio-label radio-label--on">Disponible</span></label>
+                                    <label class="radio-opt"><input type="radio" name="disp_5" value="false"><span class="radio-label radio-label--off">No disponible</span></label>
+                                </div>
+                            </label>
+                            <label class="field field--full">
+                                <span>Descripción</span>
+                                <textarea name="descripcion" rows="3">Opción práctica para viajeros de negocio, con escritorio y conexión rápida para trabajar con comodidad.</textarea>
+                            </label>
+                            <label class="field field--full">
+                                <span>Servicios de la habitación</span>
+                                <div class="tags-list" data-field="servicios">
+                                    <span class="tag">Internet Wi-Fi<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">Aire acondicionado<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">TV<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag">Escritorio de trabajo<button type="button" class="tag-x">×</button></span>
+                                </div>
+                                <div class="tag-add"><input type="text" class="tag-input" placeholder="Nuevo servicio…"><button type="button" class="btn-add">+ Agregar</button></div>
+                            </label>
+                            <label class="field field--full">
+                                <span>Servicios del hotel incluidos</span>
+                                <div class="tags-list" data-field="servicios_hotel">
+                                    <span class="tag tag--hotel">Comidas<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag tag--hotel">Spa<button type="button" class="tag-x">×</button></span>
+                                    <span class="tag tag--hotel">Zona húmeda<button type="button" class="tag-x">×</button></span>
+                                </div>
+                                <div class="tag-add"><input type="text" class="tag-input" placeholder="Nuevo servicio…"><button type="button" class="btn-add">+ Agregar</button></div>
+                            </label>
+                            <label class="field">
+                                <span>Teléfono / WhatsApp</span>
+                                <input type="text" name="contacto" value="+57 310 123 4567">
+                            </label>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn--cancel">Cancelar</button>
+                                <button type="button" class="btn btn--save">Guardar cambios</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        © 2026 Hotel Rincón del Carmen. Todos los derechos reservados.
+    </footer>
+
+
+</body>
+</html>

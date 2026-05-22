@@ -1,0 +1,284 @@
+/* ============================================================
+   PÁGINA DE RESERVAS — ESTILOS COMPLEMENTARIOS
+   ============================================================ */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    background-color: #d97f12;
+    border-bottom: 2px solid #b8690e;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+
+
+header h1 {
+    color: #000000;
+    margin: 0;
+    font-size: 22px;
+    margin-top: 0px;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #4b2e0b;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    opacity: 0.85;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #000000;
+    opacity: 1;
+}
+
+.nav-contacto {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.nav-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4b2e0b;
+    display: block;
+    transition: border-color 0.2s ease;
+}
+
+.nav-avatar:hover {
+    border-color: #000000;
+}
+
+
+.contenedor-reserva {
+    max-width: 700px;
+    margin: 0 auto 80px auto;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.formulario-reserva {
+    background-color: #161616; /* Mismo color gris oscuro que usas en tu menu-rapido */
+    border: 2px solid #F7931A; /* El borde naranja característico de tu hotel */
+    border-radius: 14px;
+    padding: 40px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+body {
+    margin: 0;
+    background-color: #0D0D0D; /* Fondo */
+}
+
+.grupo-formulario label {
+    font-size: 15px;
+    font-weight: bold;
+    color: #F7931A; /* Texto de etiquetas en naranja */
+    margin-bottom: 8px;
+    letter-spacing: 0.03em;
+}
+
+/* Inputs, Selects y Textareas integrados al modo oscuro */
+.formulario-reserva input[type="text"],
+.formulario-reserva input[type="email"],
+.formulario-reserva input[type="date"],
+.formulario-reserva select,
+.formulario-reserva textarea {
+    background-color: #0D0D0D; /* Fondo negro idéntico al fondo de la página */
+    color: #ffffff;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    transition: all 0.25s ease;
+    outline: none;
+}
+
+/* Efecto Focus: Resplandor naranja cuando el usuario va a escribir */
+.formulario-reserva input:focus,
+.formulario-reserva select:focus,
+.formulario-reserva textarea:focus {
+    border-color: #F7931A;
+    box-shadow: 0 0 8px rgba(247, 147, 26, 0.3);
+}
+
+/* Estilo estético para el menú desplegable (flecha naranja personalizada) */
+.formulario-reserva select {
+    cursor: pointer;
+    appearance: none; 
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F7931A'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 20px;
+    padding-right: 40px;
+}
+
+/* Diseño en dos columnas para las fechas y datos juntos */
+.fila-formulario {
+    display: flex;
+    gap: 20px;
+}
+
+.fila-formulario .grupo-formulario {
+    flex: 1;
+}
+
+.centro-formulario {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Forzamos a que el botón de enviar ocupe todo el ancho de su contenedor móvil */
+.formulario-reserva .btn-habitaciones {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 18px;
+    color: #0D0D0D;
+    background-color: #F7931A;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+.resaltado {
+    color: #000000;
+}
+
+.seccion-titulo {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-size: 28px;
+    padding-top: 20px !important; 
+    margin-bottom: 30px;
+}
+
+.seccion-titulo h2 {
+    border: #F7931A 2px solid;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #F7931A;
+}
+
+.seccion-subtitulo {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.contenedor-reserva-wrapper, 
+.seccion-titulo-wrapper {
+    padding-top: 20px !important; /* Reduce el colchón superior de 70px a 20px */
+}
+
+footer {
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* ============================================================
+   RESPONSIVE RESERVAS
+   ============================================================ */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        padding: 14px 18px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .nav-link {
+        font-size: 15px;
+    }
+
+    .contenedor-reserva {
+        padding: 0 14px;
+        margin-top: 16px;
+    }
+
+    .formulario-reserva {
+        padding: 28px 18px;
+    }
+
+    .fila-formulario {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .grupo-formulario label {
+        font-size: 14px;
+    }
+
+    .formulario-reserva input[type="text"],
+    .formulario-reserva input[type="email"],
+    .formulario-reserva input[type="date"],
+    .formulario-reserva select,
+    .formulario-reserva textarea {
+        font-size: 15px;
+    }
+
+    .formulario-reserva .btn-habitaciones {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .formulario-reserva {
+        padding: 22px 16px;
+    }
+
+    .contenedor-reserva {
+        max-width: 100%;
+        padding: 0 12px;
+    }
+
+    .seccion-titulo {
+        font-size: 24px;
+    }
+
+    .seccion-subtitulo {
+        font-size: 16px;
+    }
+
+    .btn-habitaciones {
+        font-size: 16px;
+    }
+}

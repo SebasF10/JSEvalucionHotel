@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tus_reservas.css">
+    <script src="js/tus_reservas.js" defer></script>
+    <title>Tus Reservas — Hotel Rincón del Carmen</title>
+</head>
+
+<body>
+
+  <!-- ===== HEADER STICKY ===== -->
+  <header class="header">
+    <h1>Hotel Rincón del Carmen</h1>
+    <nav>
+      <a href="Inicio.html" class="nav-link">Inicio</a>
+      <a href="panelcontrol.html" class="nav-link" id="nav-panelcontrol">Panel de Control</a>
+      <a href="contacto.html" class="nav-link nav-contacto" title="Contacto">✉</a>
+      <a href="perfil.html" class="nav-link nav-perfil" title="Mi cuenta">
+        <img src="images/perfil-logo.png" alt="Mi cuenta" class="nav-avatar">
+      </a>
+    </nav>
+  </header>
+
+  <section class="seccion-titulo-wrapper">
+    <div class="seccion-titulo">
+      <h2>Tus <span class="resaltado">Reservas Activas</span></h2>
+      <p class="seccion-subtitulo">Aquí puedes consultar y gestionar tus reservas actuales.</p>
+    </div>
+
+    <div class="contenedor-reservas">
+        <div id="lista-reservas" class="lista-reservas">
+            <!-- Las reservas se cargarán dinámicamente con JS -->
+        </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Hotel Rincón del Carmen. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>

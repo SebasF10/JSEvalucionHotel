@@ -1,0 +1,204 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0D0D0D;
+    color: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+}
+
+/* ===== WRAPPER ===== */
+.auth-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+/* ===== ENCABEZADO ===== */
+.auth-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.auth-header h1 {
+    color: #F7931A;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.auth-header p {
+    color: #BDBDBD;
+    font-size: 14px;
+}
+
+/* ===== TABS ===== */
+.tab-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 10px 24px;
+    border-radius: 10px;
+    border: 2px solid #F7931A;
+    background: transparent;
+    color: #F7931A;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: 'Poppins', sans-serif;
+    min-width: 130px;
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.tab-btn.active {
+    background: #F7931A;
+    color: #0D0D0D;
+}
+
+.tab-btn:hover:not(.active) {
+    background: rgba(247, 147, 26, 0.1);
+}
+
+/* ===== TARJETA DEL FORMULARIO ===== */
+.form-card {
+    background: #1A1A1A;
+    border: 1px solid #F7931A;
+    border-radius: 18px;
+    padding: 40px;
+    width: 420px;
+    max-width: 100%;
+    display: none;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.form-card.active {
+    display: flex;
+}
+
+.form-card:hover {
+    transform: translateY(-3px);
+}
+
+/* ===== TITULO DEL FORMULARIO ===== */
+.form-card h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #F7931A;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* ===== LABELS ===== */
+label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* ===== INPUTS ===== */
+input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: #0D0D0D;
+    color: #FFFFFF;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+input::placeholder {
+    color: #555;
+}
+
+input:focus {
+    border-color: #F7931A;
+}
+
+/* ===== BOTON ENVIAR ===== */
+.boton   {
+    margin-top: 26px;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background: #F7931A;
+    color: #0D0D0D;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.boton:hover {
+    background: #FFA733;
+    transform: scale(1.02);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+    body {
+        padding: 24px 12px;
+    }
+
+    .auth-wrapper {
+        padding: 0;
+    }
+
+    .form-card {
+        padding: 30px 22px;
+    }
+
+    .auth-header h1 {
+        font-size: 24px;
+    }
+
+    .tab-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-card {
+        padding: 26px 18px;
+    }
+
+    .auth-header h1 {
+        font-size: 20px;
+    }
+
+    .tab-btn {
+        padding: 9px 16px;
+        font-size: 13px;
+    }
+}

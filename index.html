@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+
+    <div class="auth-wrapper">
+
+        <!-- Encabezado -->
+        <div class="auth-header">
+            <h1>Ingreso a la plataforma</h1>
+            <p>Por favor elija una opción</p>
+        </div>
+
+        <!-- Botones de selección -->
+        <div class="tab-row">
+            <button class="tab-btn active" onclick="switchTab('login')">Login</button>
+            <button class="tab-btn" onclick="switchTab('registro')">Creación de cuenta</button>
+        </div>
+
+        <!-- Formulario: Login -->
+        <form id="formLogin">
+            <div class="form-card active" id="form-login">
+                <h2>Iniciar sesión</h2>
+
+                <label for="login-correo">Correo electrónico</label>
+                <input type="email" id="login-correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+                <label for="login-password">Contraseña</label>
+                <input type="password" id="login-password" name="contraseña" placeholder="••••••••" required>
+
+                <!-- Se le agrega id al botón para el event listener -->
+                <button class="boton" type="button" id="btnLogin">Iniciar sesión</button>
+            </div>
+        </form>
+
+        <!-- Formulario: Registro -->
+        <form id="formRegistro">
+            <div class="form-card" id="form-registro">
+                <h2>Crear cuenta</h2>
+
+                <label>Nombres y apellidos</label>
+                <input type="text" id="nombres" name="nombres" placeholder="Juan Pérez" required>
+
+                <label>Número de identificación</label>
+                <input type="number" id="identificacion" name="identificacion" placeholder="123456789" required>
+
+                <label>Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+                <label>Contraseña</label>
+                <input type="password" id="contraseña" name="contraseña" placeholder="••••••••" required>
+
+                <label>Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+## ••••••••" required>
+
+                <label>Nacionalidad</label>
+                <input type="text" id="nacionalidad" name="nacionalidad" placeholder="Colombiano/a" required>
+
+                <button class="boton" type="submit">Registrarse</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Script al final del body para que el DOM ya esté cargado -->
+    <script src="js/index.js"></script>
+</body>
+</html>
