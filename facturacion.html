@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/facturacion.css">
+    <script src="js/facturacion.js" defer></script>
+    <title>Facturación — Hotel Rincón del Carmen</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Hotel Rincón del Carmen</h1>
+        <nav>
+            <a href="Inicio.html" class="nav-link">Inicio</a>
+            <a href="reservas.html" class="nav-link">Reservas</a>
+            <a href="tus_reservas.html" class="nav-link">Mis Reservas</a>
+            <a href="facturacion.html" class="nav-link">Facturación</a>
+            <a href="contacto.html" class="nav-link nav-contacto" title="Contacto">✉</a>
+            <a href="perfil.html" class="nav-link nav-perfil" title="Mi cuenta">
+                <img src="images/perfil-logo.png" alt="Mi cuenta" class="nav-avatar">
+            </a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="page-header">
+            <div>
+                <h2>Facturación de <span>Reservas</span></h2>
+                <p>Genera una factura clara y profesional para cualquier reserva existente en el sistema.</p>
+            </div>
+        </section>
+
+        <section class="factura-panel">
+            <div class="panel-instrucciones">
+                <h3>Selecciona la reserva</h3>
+                <p>Escoge la reserva y haz clic en “Generar factura” para ver los datos completos y el valor total.</p>
+            </div>
+
+            <div class="factura-actions">
+                <div class="campo-select">
+                    <label for="reserva-select">Reserva registrada</label>
+                    <select id="reserva-select">
+                        <option value="">Cargando reservas...</option>
+                    </select>
+                </div>
+                <div class="botones-acciones">
+                    <button id="btn-generar" class="btn btn-primary" disabled>Generar factura</button>
+                    <button id="btn-imprimir" class="btn btn-secondary" disabled>Imprimir factura</button>
+                </div>
+            </div>
+
+            <div id="factura-contenedor" class="factura-contenedor hidden">
+                <article class="factura-card">
+                    <header class="factura-card__header">
+                        <div>
+                            <h3>Factura de Reserva</h3>
+                            <p class="texto-medio" id="factura-fecha"></p>
+                        </div>
+                        <div class="factura-id">
+                            <span>Factura</span>
+                            <strong id="factura-numero"></strong>
+                        </div>
+                    </header>
+
+                    <div class="factura-grid">
+                        <section class="factura-seccion">
+                            <h4>Datos del cliente</h4>
+                            <p><strong>Nombre:</strong> <span id="factura-cliente"></span></p>
+                            <p><strong>Email:</strong> <span id="factura-email"></span></p>
+                        </section>
+
+                        <section class="factura-seccion">
+                            <h4>Datos de la habitación</h4>
+                            <p><strong>Habitación:</strong> <span id="factura-habitacion"></span></p>
+                            <p><strong>Precio / noche:</strong> <span id="factura-precio"></span></p>
+                        </section>
+
+                        <section class="factura-seccion">
+                            <h4>Datos de la reserva</h4>
+                            <p><strong>Check-In:</strong> <span id="factura-checkin"></span></p>
+                            <p><strong>Check-Out:</strong> <span id="factura-checkout"></span></p>
+                            <p><strong>Noches:</strong> <span id="factura-noches"></span></p>
+                        </section>
+
+                        <section class="factura-seccion">
+                            <h4>Información adicional</h4>
+                            <p><strong>Huéspedes:</strong> <span id="factura-huespedes"></span></p>
+                            <p><strong>Peticiones:</strong> <span id="factura-peticiones"></span></p>
+                        </section>
+                    </div>
+
+                    <div class="factura-total">
+                        <span>Total a pagar</span>
+                        <strong id="factura-total"></strong>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Hotel Rincón del Carmen. Todos los derechos reservados.
+    </footer>
+</body>
+</html>

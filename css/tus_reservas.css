@@ -37,16 +37,35 @@ body {
     font-size: 15px;
 }
 
+.card-reserva .card-actions {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.card-reserva .btn-factura,
 .card-reserva .btn-cancelar {
-    margin-top: 12px;
     padding: 10px 20px;
-    background-color: #F7931A;
-    color: #0D0D0D;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.card-reserva .btn-factura {
+    background-color: #1285CC;
+    color: #ffffff;
+}
+
+.card-reserva .btn-factura:hover {
+    background-color: #0f74b2;
+}
+
+.card-reserva .btn-cancelar {
+    background-color: #F7931A;
+    color: #0D0D0D;
 }
 
 .card-reserva .btn-cancelar:hover {

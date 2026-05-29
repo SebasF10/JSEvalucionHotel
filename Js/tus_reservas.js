@@ -29,7 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <p><strong>Check-In:</strong> ${reserva.checkin}</p>
             <p><strong>Check-Out:</strong> ${reserva.checkout}</p>
             ${reserva.peticiones ? `<p><strong>Peticiones:</strong> ${reserva.peticiones}</p>` : ""}
-            <button class="btn-cancelar" data-id="${reserva.id}">Cancelar Reserva</button>
+            <div class="card-actions">
+                <button class="btn-factura" data-id="${reserva.id}">Factura</button>
+                <button class="btn-cancelar" data-id="${reserva.id}">Cancelar Reserva</button>
+            </div>
         `;
 
         listaReservas.appendChild(card);
@@ -57,6 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             alert("❌ Reserva cancelada con éxito.");
+        }
+
+        if (e.target.classList.contains("btn-factura")) {
+            const id = e.target.dataset.id;
+            window.location.href = `facturacion.html?reservaId=${id}`;
         }
     });
 });
