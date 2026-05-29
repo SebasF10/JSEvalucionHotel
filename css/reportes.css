@@ -110,6 +110,104 @@ nav {
     font-size: 16px;
 }
 
+.report-panel {
+    background: #161616;
+    border: 1px solid #282828;
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.report-controls__row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.report-controls__actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#year-select {
+    min-width: 140px;
+    padding: 12px 14px;
+    background: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    color: #e0e0e0;
+    font-size: 15px;
+}
+
+.report-note {
+    margin: 0;
+    color: #999;
+    font-size: 15px;
+}
+
+.report-result {
+    margin-top: 24px;
+}
+
+.report-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.report-summary h3 {
+    margin: 0;
+    color: #f0f0f0;
+    font-size: 22px;
+}
+
+.report-summary span {
+    color: #F7931A;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.report-table-wrapper {
+    overflow-x: auto;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+}
+
+.report-table th,
+.report-table td {
+    padding: 14px 12px;
+    border: 1px solid #282828;
+    text-align: left;
+    font-size: 14px;
+}
+
+.report-table th {
+    background: #111;
+    color: #f0f0f0;
+}
+
+.report-table tbody tr:hover {
+    background: #1c1c1c;
+}
+
+.report-table tfoot td {
+    font-weight: bold;
+    background: #121212;
+    color: #f0f0f0;
+}
+
+.hidden { display: none !important; }
+
 /* ============================================================
    LISTA DE HABITACIONES
    ============================================================ */

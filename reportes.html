@@ -26,224 +26,55 @@
 
         <div class="page-header">
             <h2>Reportes <span class="resaltado">Anuales</span></h2>
-            <p>Selecciona un año y mire lo reportado en el año</p>
+            <p>Selecciona un año y mira la ocupación y cancelaciones mensuales.</p>
         </div>
 
-        <div class="rooms-list">
-
-            <!-- Habitación 1 -->
-            <article class="room-item" data-id="1">
-                <button class="room-trigger" aria-expanded="false">
-                    <div class="room-trigger__info">
-                        <span class="room-num">2020</span>
-                        <div class="room-title-block">
-                            <span class="room-name">Reporte del año 2020</span>
-                        </div>
-                    </div>
-                    <div class="room-trigger__right">
-                        <span class="room-price">$$$<small>/año</small></span>
-                        <span class="chevron">▾</span>
-                    </div>
-                </button>
-                <div class="room-panel">
-                    <div class="room-panel__inner">
-                        <form class="room-form" data-room-id="1">
-                            <div class="form-grid">
-                                <label class="field"><span>Precio / noche (COP)</span><input type="number" name="precio" value="420000"></label>
-                                <label class="field"><span>N.° habitación</span><input type="number" name="numero" value="101"></label>
-                                <label class="field"><span>Área (m²)</span><input type="number" name="area" value="72"></label>
-                                <label class="field"><span>Personas (máx.)</span><input type="number" name="personas" value="2"></label>
-                                <label class="field"><span>Camas</span><input type="number" name="camas" value="1"></label>
-                                <label class="field"><span>Ubicación</span><input type="text" name="ubicacion" value="Torre Este"></label>
-                            </div>
-                            <label class="field field--full">
-                                <span>Disponibilidad</span>
-                                <div class="radio-group">
-                                    <label class="radio-opt"><input type="radio" name="disp_1" value="true" checked><span class="radio-label radio-label--on">Disponible</span></label>
-                                    <label class="radio-opt"><input type="radio" name="disp_1" value="false"><span class="radio-label radio-label--off">No disponible</span></label>
-                                </div>
-                            </label>
-                            <label class="field field--full">
-                                <span>Descripción</span>
-                                <textarea name="descripcion" rows="3">Disfruta de la máxima comodidad y lujo en nuestra suite presidencial, diseñada para ofrecer una estancia exclusiva con sala privada y detalles de alta gama.</textarea>
-                            </label>
-                            <label class="field field--full">
-                                <span>Servicios de la habitación</span>
-                                <div class="tags-list" data-field="servicios">
-                                    <span class="tag">Internet Wi-Fi<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag">Minibar<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag">Jacuzzi<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag">Aire acondicionado<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag">TV satelital<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag">Caja fuerte<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag">Piano de cola<button type="button" class="tag-x">×</button></span>
-                                </div>
-                                <div class="tag-add"><input type="text" class="tag-input" placeholder="Nuevo servicio…"><button type="button" class="btn-add">+ Agregar</button></div>
-                            </label>
-                            <label class="field field--full">
-                                <span>Servicios del hotel incluidos</span>
-                                <div class="tags-list" data-field="servicios_hotel">
-                                    <span class="tag tag--hotel">Restaurante y desayuno<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag tag--hotel">Spa<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag tag--hotel">Zona húmeda<button type="button" class="tag-x">×</button></span>
-                                </div>
-                                <div class="tag-add"><input type="text" class="tag-input" placeholder="Nuevo servicio…"><button type="button" class="btn-add">+ Agregar</button></div>
-                            </label>
-                            <label class="field">
-                                <span>Teléfono / WhatsApp</span>
-                                <input type="text" name="contacto" value="+57 310 123 4567">
-                            </label>
-                            <div class="form-actions">
-                                <button type="button" class="btn btn--cancel">Cancelar</button>
-                                <button type="button" class="btn btn--save">Guardar cambios</button>
-                            </div>
-                        </form>
+        <section class="report-panel">
+            <div class="report-controls">
+                <div class="report-controls__row">
+                    <label for="year-select">Seleccione un año</label>
+                    <div class="report-controls__actions">
+                        <select id="year-select" name="anio">
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                        </select>
+                        <button id="show-report" class="btn btn--save" type="button">Mostrar reporte</button>
                     </div>
                 </div>
-            </article>
+                <p class="report-note">Los datos de ejemplo se muestran con información falsa dentro del reporte para cada año.</p>
+            </div>
 
-            <!-- Habitación 2 -->
-            <article class="room-item" data-id="2">
-                <button class="room-trigger" aria-expanded="false">
-                    <div class="room-trigger__info">
-                        <span class="room-num">2021</span>
-                        <div class="room-title-block">
-                            <span class="room-name">Reporte del año 2021</span>
-                        </div>
-                    </div>
-                    <div class="room-trigger__right">
-                        <span class="room-price">$$$<small>/año</small></span>
-                        <span class="chevron">▾</span>
-                    </div>
-                </button>
-                <div class="room-panel">
-                    <div class="room-panel__inner">
-                        <form class="room-form" data-room-id="2">
-                            <div class="form-grid">
-                                <label class="field"><span>Precio / noche (COP)</span><input type="number" name="precio" value="320000"></label>
-                                <label class="field"><span>N.° habitación</span><input type="number" name="numero" value="202"></label>
-                                <label class="field"><span>Área (m²)</span><input type="number" name="area" value="54"></label>
-                                <label class="field"><span>Personas (máx.)</span><input type="number" name="personas" value="3"></label>
-                                <label class="field"><span>Camas</span><input type="number" name="camas" value="2"></label>
-                                <label class="field"><span>Ubicación</span><input type="text" name="ubicacion" value="Torre Central"></label>
-                            </div>
-                            <label class="field field--full">
-                                <span>Disponibilidad</span>
-                                <div class="radio-group">
-                                    <label class="radio-opt"><input type="radio" name="disp_2" value="true" checked><span class="radio-label radio-label--on">Disponible</span></label>
-                                    <label class="radio-opt"><input type="radio" name="disp_2" value="false"><span class="radio-label radio-label--off">No disponible</span></label>
-                                </div>
-                            </label>
-                            <label class="field field--full">
-                                <span>Descripción</span>
-                                <textarea name="descripcion" rows="3">Una habitación moderna con sala de estar y vista al jardín, pensada para ofrecer confort y privacidad sin sacrificar estilo.</textarea>
-                            </label>
-                            <label class="field field--full">
-                                <span>Servicios de la habitación</span>
-                                <div class="tags-list" data-field="servicios">
-                                    <span class="tag">Internet Wi-Fi<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag">Minibar<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag">Aire acondicionado<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag">TV de pantalla plana<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag">Ducha de hidromasaje<button type="button" class="tag-x">×</button></span>
-                                </div>
-                                <div class="tag-add"><input type="text" class="tag-input" placeholder="Nuevo servicio…"><button type="button" class="btn-add">+ Agregar</button></div>
-                            </label>
-                            <label class="field field--full">
-                                <span>Servicios del hotel incluidos</span>
-                                <div class="tags-list" data-field="servicios_hotel">
-                                    <span class="tag tag--hotel">Desayuno buffet<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag tag--hotel">Spa<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag tag--hotel">Zonas húmedas<button type="button" class="tag-x">×</button></span>
-                                </div>
-                                <div class="tag-add"><input type="text" class="tag-input" placeholder="Nuevo servicio…"><button type="button" class="btn-add">+ Agregar</button></div>
-                            </label>
-                            <label class="field">
-                                <span>Teléfono / WhatsApp</span>
-                                <input type="text" name="contacto" value="+57 310 123 4567">
-                            </label>
-                            <div class="form-actions">
-                                <button type="button" class="btn btn--cancel">Cancelar</button>
-                                <button type="button" class="btn btn--save">Guardar cambios</button>
-                            </div>
-                        </form>
-                    </div>
+            <div id="report-result" class="report-result hidden">
+                <div class="report-summary">
+                    <h3>Reporte de ocupación y cancelaciones</h3>
+                    <span id="report-year">Año 2020</span>
                 </div>
-            </article>
-
-            <!-- Habitación 3 -->
-            <article class="room-item" data-id="3">
-                <button class="room-trigger" aria-expanded="false">
-                    <div class="room-trigger__info">
-                        <span class="room-num">2022</span>
-                        <div class="room-title-block">
-                            <span class="room-name">Reporte de año 2022</span>
-                        </div>
-                    </div>
-                    <div class="room-trigger__right">
-                        <span class="room-price">$$$<small>/año</small></span>
-                        <span class="chevron">▾</span>
-                    </div>
-                </button>
-                <div class="room-panel">
-                    <div class="room-panel__inner">
-                        <form class="room-form" data-room-id="3">
-                            <div class="form-grid">
-                                <label class="field"><span>Precio / noche (COP)</span><input type="number" name="precio" value="220000"></label>
-                                <label class="field"><span>N.° habitación</span><input type="number" name="numero" value="305"></label>
-                                <label class="field"><span>Área (m²)</span><input type="number" name="area" value="36"></label>
-                                <label class="field"><span>Personas (máx.)</span><input type="number" name="personas" value="2"></label>
-                                <label class="field"><span>Camas</span><input type="number" name="camas" value="2"></label>
-                                <label class="field"><span>Ubicación</span><input type="text" name="ubicacion" value="Torre Oeste"></label>
-                            </div>
-                            <label class="field field--full">
-                                <span>Disponibilidad</span>
-                                <div class="radio-group">
-                                    <label class="radio-opt"><input type="radio" name="disp_3" value="true" checked><span class="radio-label radio-label--on">Disponible</span></label>
-                                    <label class="radio-opt"><input type="radio" name="disp_3" value="false"><span class="radio-label radio-label--off">No disponible</span></label>
-                                </div>
-                            </label>
-                            <label class="field field--full">
-                                <span>Descripción</span>
-                                <textarea name="descripcion" rows="3">Disfruta de una habitación elegante con cama doble y baño privado, pensada para el descanso absoluto de parejas o viajeros solos.</textarea>
-                            </label>
-                            <label class="field field--full">
-                                <span>Servicios de la habitación</span>
-                                <div class="tags-list" data-field="servicios">
-                                    <span class="tag">Internet Wi-Fi<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag">Minibar<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag">Aire acondicionado<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag">TV<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag">Caja fuerte<button type="button" class="tag-x">×</button></span>
-                                </div>
-                                <div class="tag-add"><input type="text" class="tag-input" placeholder="Nuevo servicio…"><button type="button" class="btn-add">+ Agregar</button></div>
-                            </label>
-                            <label class="field field--full">
-                                <span>Servicios del hotel incluidos</span>
-                                <div class="tags-list" data-field="servicios_hotel">
-                                    <span class="tag tag--hotel">Restaurante<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag tag--hotel">Piscina<button type="button" class="tag-x">×</button></span>
-                                    <span class="tag tag--hotel">Zona húmeda<button type="button" class="tag-x">×</button></span>
-                                </div>
-                                <div class="tag-add"><input type="text" class="tag-input" placeholder="Nuevo servicio…"><button type="button" class="btn-add">+ Agregar</button></div>
-                            </label>
-                            <label class="field">
-                                <span>Teléfono / WhatsApp</span>
-                                <input type="text" name="contacto" value="+57 310 123 4567">
-                            </label>
-                            <div class="form-actions">
-                                <button type="button" class="btn btn--cancel">Cancelar</button>
-                                <button type="button" class="btn btn--save">Guardar cambios</button>
-                            </div>
-                        </form>
-                    </div>
+                <div class="report-table-wrapper">
+                    <table class="report-table">
+                        <thead>
+                            <tr>
+                                <th>Mes</th>
+                                <th>Ocupación</th>
+                                <th>Cancelaciones</th>
+                                <th>Ingresos</th>
+                            </tr>
+                        </thead>
+                        <tbody id="report-tbody"></tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Total del año</td>
+                                <td id="report-total-ocupacion"></td>
+                                <td id="report-total-cancelaciones"></td>
+                                <td id="report-total-ingresos"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
                 </div>
-            </article>
-        </div>
+            </div>
+        </section>
 
-            
     </main>
 
-    
 </body>
 </html>
